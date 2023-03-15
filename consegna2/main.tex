@@ -1,0 +1,104 @@
+\documentclass[a4paper]{article}
+\usepackage{listings}
+\usepackage{qtree}
+\usepackage{xcolor}
+\usepackage{forest}
+\usepackage{multicol}
+\setlength{\columnsep}{3cm}
+\usepackage{parskip}
+\usepackage{changepage}
+\usepackage[T1]{fontenc}
+\usepackage{amsmath}
+\usepackage{hyperref}
+\usepackage{listings}
+\usepackage{amsthm}
+\usepackage{amssymb}
+\usepackage{float}
+\usepackage[utf8]{inputenc}
+\usepackage{graphicx}
+\usepackage[italian]{babel}
+\usepackage{thmtools}
+\graphicspath{{figures/}}
+\usepackage{xcolor}
+
+\begin{document}
+
+
+\title{Consegna 2 \\ \large Numeri Binari} 
+\author{Lorenzo Dentis 914833}
+\maketitle
+
+\section{Domande}
+Qual è il tema/concetto informatico oggetto dell’attività?\\
+
+Quali sono gli obiettivi formativi?\\
+
+Suddividete l’attività in fasi e per ogni fase individuate snodi  e indicatori\\
+
+Quali ingredienti delle varie teorie/metodologie viste nelle lezioni precedenti trovate in questa attività?\\
+
+Riuscite a individuare nel testo dell’attività suggerimenti per il /la docente? secondo voi quali altre indicazioni devono essere integrate volendo rendere il documento una guida “completa” rispetto a snodi e indicatori?\\
+
+\newpage
+\section{Risposte}
+\subsection{1 Qual è il tema/concetto informatico oggetto dell’attività?} 
+Il tema è la codifica del dato in binario.Come rappresentare i numeri decimali in notazione binaria
+
+\subsection{2 Quali sono gli obiettivi formativi?}
+Io ho indivuato 4 obiettivi formativi
+\begin{itemize}
+	\item O-P5-D-1. utilizzare combinazioni di simboli per rappresentare informazioni familiari complesse (es. colori secondari, frasi, ...);\\
+		In questo caso i simboli sono prima le carte, poi i numeri binari.
+	\item O-P5-N-3. comprendere come la riservatezza delle informazioni digitali può essere tutelata mediante codici "segreti";\\
+		I numeri binari sono un esempio di codifica, per quanto basilare.Già questo può dare un idea di come "celare" dei dati, tale argomento viene approfondito soprattutto nella parte "extra", a pag 13.  
+	\item O-M-D-1. riconoscere se due rappresentazioni alternative semplici della stessa informazione sono intercambiabili per i propri scopi;\\
+		Anche se è un obbiettivo da scuola secondaria credo sia presente. In questo caso però non viene evidenziato il parallelismo binario-decimale ne gli scopi
+	\item O-M-D-2. effettuare operazioni semplici su simboli che rappresentano informazione strutturata (es. numeri binari, immagini "bitmap");\\ 
+		Anche se è un obbiettivo da scuola secondaria questo obiettivo è decisamente presente. L'informazione è strutturata, per quanto la struttura sia decisamente semplice.
+\end{itemize}
+\subsection{3 Suddividete l’attività in fasi e per ogni fase individuate snodi  e indicatori}
+\subsubsection{Fase 1, comprendere i Bit}
+In questa fase vengono mostrate le carte agli alievi in modo da fargli comprendere le relazioni tra una carta (un bit) e l'altra.
+\begin{itemize}
+	\item \textbf{snodi}\\ Comprendere il valore posizionale delle carte (ogni carta ha valore diverso in base alla posizione)\\
+		Comprendere la relazione tra una carta e la successiva (ogni carta ha valore doppio della carta alla sua destra)
+	\item \textbf{indicatori}\\
+		Lo studente capisce che ogni carta ha il doppio dei punti della carta immediatamente alla destra\\
+		Lo studente è in grado di ipotizzare che valore avrebbe una nuova carta posta a sinistra dell'ultima.
+
+\end{itemize}
+\subsubsection{Fase 2, comprendere il Byte}
+In questa fase non consideriamo più la singola carta, bensì le 5 carte nel loro insieme (potremmo definirlo un byte).
+\begin{itemize}
+	\item \textbf{snodi}\\
+		Capire a che valore decimale corrisponde una precisa combinazione di carte.\\
+		Essere in grado di passare dal valore numerico alla combinazione e viceversa.\\
+		Comprendere la relazione tra numero di carte e possibili valori rappresentabili.\\
+		Comprendere che ogni possibile numero (nel range consentito dalle carte) è rappresentabile in binario.
+	\item \textbf{indicatori}\\
+		L'allievo è in grado di capire il valore rappresentato da una combinazione di carte.\\
+		Dato un valore l'allievo è in grado di girare le carte corrette.\\
+		L'allievo è in grado di dire qual'è il massimo valore rappresentabile con 5 carte e aggiungendo una carta come cambia.\\
+		L'allievo sa qual'è il minimo numero rappresentabile.\\
+\end{itemize}
+\subsubsection{Fase 3, astrarre dalle carte}
+In questa fase abbandoniamo le carte ed astraiamo ai numeri decimali.Questa fase comprende anche il foglio di lavoro a pag 13.
+\begin{itemize}
+	\item \textbf{snodi}\\ 
+		Passare agevolmente da un numero decimale ad uno binario.\\
+		Comprendere che ci sono molti modi di rappresentare un numero binario, le carte o i disegni sono solo uno di questi. (in pratica comprendere che il binario, ed anche il decimale, sono solo un modo differente di rappresentare un numero) 
+	\item \textbf{indicatori}\\
+		L'alunno è capace di passare agevolmente dalla notazione decimale a quella binaria, senza l'ausilio delle carte.
+		Qualora gli sia presentato un numero binario in forma differente (i disegni nella parte extra) è in grado di rendersi conto che si tratta comunque di un numero.
+\end{itemize}
+\subsection{4 Quali ingredienti delle varie teorie/metodologie viste nelle lezioni precedenti trovate in questa attività?}
+Costruttivismo, nella fattispecie l'apprendimento attivo, dato che ai bambini già dalla fase uno viene chiesto di interagire con gli strumenti per trovare una soluzione ad un problema. Citando Piaget nelle slides \emph{i processi cognitivi tendono verso la viabilità, servono al soggetto per organizzare il mondo esperienziale e non per scoprire una realtà ontologica oggettiva.}
+In questa attività per poter rispondere alla domanda "che valore avrebbe una nuova carta posta a sinistra dell'ultima?"lo studente deve aver compreso che ogni carta ha il doppio del valore della carta precedente.\\
+Oltretutto l'insegnante ha una influenza marginale sulla comprensione, il bambino impara autonomamente tramite una esperienza diretta con lo strumento (le carte), si verifica un processo di \textbf{scoperta attiva}.\\
+
+Nell'attività proposta vi è anche un po' di Socio-costruttivismo, in quanto nelle prime 2 fasi gli studenti collaborano per giungere ad una risposta (ad esempio vengono scelti degli studenti per reggere le carte mentre altri cercano risposte alle domande) ed in generale è incentivato il \textbf{collaborative learning} ed il confronto.
+
+\subsection{5 che attività vengono suggerite al docente? come integrarle?}
+
+TODO: io integrerei qualche attività/domanda per far comprendere meglio il fatto che il valore della carta dipende dalla sua posizione, cioè non posso mettermi a spostare le carte come mi pare.
+\end{document}
