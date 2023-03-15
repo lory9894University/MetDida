@@ -18,8 +18,13 @@
 \usepackage{graphicx}
 \usepackage[italian]{babel}
 \usepackage{thmtools}
+\usepackage{biblatex}
+\usepackage{csquotes}
+\usepackage{enumitem}
 \graphicspath{{figures/}}
 \usepackage{xcolor}
+\addbibresource{refs.bib}
+
 
 \begin{document}
 
@@ -60,36 +65,50 @@ Io ho indivuato 4 obiettivi formativi
 \subsubsection{Fase 1, comprendere i Bit}
 In questa fase vengono mostrate le carte agli alievi in modo da fargli comprendere le relazioni tra una carta (un bit) e l'altra.
 \begin{itemize}
-	\item \textbf{snodi}\\ Comprendere il valore posizionale delle carte (ogni carta ha valore diverso in base alla posizione)\\
-		Comprendere la relazione tra una carta e la successiva (ogni carta ha valore doppio della carta alla sua destra)
-	\item \textbf{indicatori}\\
-		Lo studente capisce che ogni carta ha il doppio dei punti della carta immediatamente alla destra\\
-		Lo studente è in grado di ipotizzare che valore avrebbe una nuova carta posta a sinistra dell'ultima.
+	\item \textbf{snodi}
+		\begin{itemize}[label={--}]
+			\item Comprendere il valore posizionale delle carte (ogni carta ha valore diverso in base alla posizione)
+			\item Comprendere la relazione tra una carta e la successiva (ogni carta ha valore doppio della carta alla sua destra)
+		\end{itemize}
+	\item \textbf{indicatori}
+		\begin{itemize}[label={--}]
+			\item Lo studente capisce che ogni carta ha il doppio dei punti della carta immediatamente alla destra
+			\item Lo studente è in grado di ipotizzare che valore avrebbe una nuova carta posta a sinistra dell'ultima.
+		\end{itemize}
 
 \end{itemize}
 \subsubsection{Fase 2, comprendere il Byte}
 In questa fase non consideriamo più la singola carta, bensì le 5 carte nel loro insieme (potremmo definirlo un byte).
 \begin{itemize}
-	\item \textbf{snodi}\\
-		Capire a che valore decimale corrisponde una precisa combinazione di carte.\\
-		Essere in grado di passare dal valore numerico alla combinazione e viceversa.\\
-		Comprendere la relazione tra numero di carte e possibili valori rappresentabili.\\
-		Comprendere che ogni possibile numero (nel range consentito dalle carte) è rappresentabile in binario.
-	\item \textbf{indicatori}\\
-		L'allievo è in grado di capire il valore rappresentato da una combinazione di carte.\\
-		Dato un valore l'allievo è in grado di girare le carte corrette.\\
-		L'allievo è in grado di dire qual'è il massimo valore rappresentabile con 5 carte e aggiungendo una carta come cambia.\\
-		L'allievo sa qual'è il minimo numero rappresentabile.\\
+	\item \textbf{snodi}
+		\begin{itemize}[label={--}]
+			\item Capire a che valore decimale corrisponde una precisa combinazione di carte.
+			\item Essere in grado di passare dal valore numerico alla combinazione e viceversa.
+			\item Comprendere la relazione tra numero di carte e possibili valori rappresentabili.
+			\item Comprendere che ogni possibile numero (nel range consentito dalle carte) è rappresentabile in binario.
+		\end{itemize}
+	\item \textbf{indicatori}
+		\begin{itemize}[label={--}]
+			\item L'allievo è in grado di capire il valore rappresentato da una combinazione di carte.
+			\item Dato un valore l'allievo è in grado di girare le carte corrette.
+			\item L'allievo è in grado di dire qual'è il massimo valore rappresentabile con 5 carte e aggiungendo una carta come cambia.
+			\item L'allievo sa qual'è il minimo numero rappresentabile.
+			\item L'allievo è in grado di contare.  
+		\end{itemize}
 \end{itemize}
 \subsubsection{Fase 3, astrarre dalle carte}
 In questa fase abbandoniamo le carte ed astraiamo ai numeri decimali.Questa fase comprende anche il foglio di lavoro a pag 13.
 \begin{itemize}
-	\item \textbf{snodi}\\ 
-		Passare agevolmente da un numero decimale ad uno binario.\\
-		Comprendere che ci sono molti modi di rappresentare un numero binario, le carte o i disegni sono solo uno di questi. (in pratica comprendere che il binario, ed anche il decimale, sono solo un modo differente di rappresentare un numero) 
-	\item \textbf{indicatori}\\
-		L'alunno è capace di passare agevolmente dalla notazione decimale a quella binaria, senza l'ausilio delle carte.
-		Qualora gli sia presentato un numero binario in forma differente (i disegni nella parte extra) è in grado di rendersi conto che si tratta comunque di un numero.
+	\item \textbf{snodi}
+		\begin{itemize}[label={--}]
+			\item Passare agevolmente da un numero decimale ad uno binario.
+			\item Comprendere che ci sono molti modi di rappresentare un numero binario, le carte o i disegni sono solo uno di questi. (in pratica comprendere che il binario, ed anche il decimale, sono solo un modo differente di rappresentare un numero)
+		\end{itemize}
+	\item \textbf{indicatori}
+		\begin{itemize}[label={--}]
+			\item L'alunno è capace di passare agevolmente dalla notazione decimale a quella binaria, senza l'ausilio delle carte.
+			\item Qualora gli sia presentato un numero binario in forma differente (i disegni nella parte extra) è in grado di rendersi conto che si tratta comunque di un numero.
+		\end{itemize}
 \end{itemize}
 \subsection{4 Quali ingredienti delle varie teorie/metodologie viste nelle lezioni precedenti trovate in questa attività?}
 Costruttivismo, nella fattispecie l'apprendimento attivo, dato che ai bambini già dalla fase uno viene chiesto di interagire con gli strumenti per trovare una soluzione ad un problema. Citando Piaget nelle slides \emph{i processi cognitivi tendono verso la viabilità, servono al soggetto per organizzare il mondo esperienziale e non per scoprire una realtà ontologica oggettiva.}
@@ -98,7 +117,23 @@ Oltretutto l'insegnante ha una influenza marginale sulla comprensione, il bambin
 
 Nell'attività proposta vi è anche un po' di Socio-costruttivismo, in quanto nelle prime 2 fasi gli studenti collaborano per giungere ad una risposta (ad esempio vengono scelti degli studenti per reggere le carte mentre altri cercano risposte alle domande) ed in generale è incentivato il \textbf{collaborative learning} ed il confronto.
 
-\subsection{5 che attività vengono suggerite al docente? come integrarle?}
+Riscontro inoltre la presenza della strategia \textbf{Learning Cycle Instructional Models (5E)}, anche se mancano alcune fasi, come la valutazione.In ogni caso si rifà molto al processo descritto da Piaget ed analizzato nel documento \emph{The Gears of My Childhood} \cite{gears} in cui le conoscenze vengono trasmesse incrementalmente, poggiandosi su basi pregresse.
 
-TODO: io integrerei qualche attività/domanda per far comprendere meglio il fatto che il valore della carta dipende dalla sua posizione, cioè non posso mettermi a spostare le carte come mi pare.
+\subsection{5 che attività vengono suggerite al docente? come integrarle?}
+Le attività suggerite al docente sono:
+\begin{enumerate}
+	\item Portare 5 studenti alla cattedra e formure ad ognuno una carta, poi cercare di far comprendere al resto della classe la regola che definisce il valore delle carte
+	\item Chiedere alla classe di fare ipotesi sul valore di carte successive
+	\item Scrivere diversi numeri in binario coprendo o scoprendo le carte
+	\item Chiedere agli studenti di fare lo stesso
+	\item Chiedere agli studenti il minimo numero rappresentabile e successivamente contare
+	\item Chiedere agli studenti di convertire da binario a decimale e viceversa senza l'ausilio delle carte
+	\item Passare ad altre rapresentazioni (spunte, picche, cerchi,etc..).
+\end{enumerate}
+Io integrerei qualche attività/domanda per far comprendere meglio il fatto che il valore della carta dipende dalla sua posizione, cioè non posso mettermi a spostare le carte come mi pare.\\
+Ad esempio al posto degli studenti (che si possono muovere) fisserei le carte su una bacheca e chiederei agli studenti di coprirle/scoprirle con un foglio.\\
+
+L'altra cosa che farei è dedicare più tempo al conteggio, contando dal valore minimo (0) al valore massimo (32), facendoglio notare che non è possibile rappresentare un numero maggiore. Cioè renderei subito chiaro qual'è il range di valori rappresentabili e come incrementarlo (aggiungere una carta).
+\printbibliography
 \end{document}
+
