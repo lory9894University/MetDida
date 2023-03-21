@@ -1,0 +1,64 @@
+\documentclass[a4paper]{article}
+\setcounter{secnumdepth}{3}
+\usepackage{listings}
+\usepackage{qtree}
+\usepackage{xcolor}
+\usepackage{forest}
+\usepackage{multicol}
+\setlength{\columnsep}{3cm}
+\usepackage{parskip}
+\usepackage{changepage}
+\usepackage[T1]{fontenc}
+\usepackage{amsmath}
+\usepackage{hyperref}
+\usepackage{listings}
+\usepackage{amsthm}
+\usepackage{amssymb}
+\usepackage{float}
+\usepackage[utf8]{inputenc}
+\usepackage{graphicx}
+\usepackage[italian]{babel}
+\usepackage{thmtools}
+\usepackage{csquotes}
+\usepackage{biblatex}
+\graphicspath{{figures/}}
+\usepackage{xcolor}
+\addbibresource{refs.bib}
+
+\begin{document}
+
+\author{Lorenzo Dentis, lorenzo.dentis@edu.unito.it}
+\title{Consegna 3 \\ \large Algoritmo}
+\maketitle
+
+\section{Domande}
+Tenendo conto delle discussioni svolte a lezione sulla definizione di algoritmo e  delle sue proprietà scrivete una vostra definizione di algoritmo e delle sue proprietà motivando eventuali differenze rispetto alla formulazione vista a lezione. Nello svolgere  questo compito tenete presente che la discussione sulle definizioni deve essere rivolta a classi delle scuole secondarie di secondo grado senza prerequisiti particolari.
+\section{Risposte}
+\subsection{Definizione di algoritmo}
+Io ricordo che algoritmo mi fu definito come "una sequenza finita di istruzioni elementari per giungere da un problema ad una soluzione". Ad una ipotetica classe delle scuole secondarie di secondo grado riproporrei questa definizione, perchè riesce ad essere sufficientemente precisa ma è soprattutto molto succinta e facile da memorizzare e comprendere (tanto che ancora adesso la ricordo). Certo non è la definizione più esaustiva e formale, però nella sua semplicità mi piace molto.\\
+Volendo andare nel dettaglio, e basandomi sulla discrussione in classe, definirei un algoritmo come \emph{Una sequenza finita e ordinata di istruzioni elementari univoche che da un problema porta alla sua soluzione.}\\
+Non è molto differente dalla definizione data in classe, secondo me è un po' migliore in quanto mette in evidenza il fatto che l'ordine di esecuzione delle istruzioni è molto importante, in secondo luogo credo che questa definizione sia più esplicita riguardo al fatto che l'algoritmo non è la soluzione, l'algoritmo associa un problema alla sua soluzione.\\\\
+In questo sono della stessa idea del mio collega Cacioli (di cui ho sentito le argomentazioni nelle videoregistrazioni), secondo la mia interpretazione un algoritmo non deve essere corretto per essere considerato tale.Un algoritmo sbagliato è comunque un algoritmo, per due motivi.
+\begin{enumerate}
+	\item Per quanto sia possibile verificare formalmente un algoritmo tale operazione non viene quasi mai svolta, quindi potrebbero esserci degli \textit{"edge cases"} che vanno a vanificare la correttezza di un sacco di algoritmi.Probabilmente tali casi non ci sono, o sono rarissimi, ma senza una verifica formale non si può affermare che un algoritmo sia veramente corretto e basare la definizione di algoritmo su un assunto così forte mi sembra un po' troppo stringente.
+		(Ricordo che il professor Roversi nel corso di Algoritmi e complessità in maniera provocatoria affermava: "Voi avete formalmente dimostrato che il quicksort fornisce una lista ordinata di elementi?No, vi basate sulla fiducia.Siete sicuri che qualcuno lo abbia mai dimostrato?")
+	\item Volendo essere molto precisi quando si sta parlando di \textbf{un} algoritmo ci si riferisce ad un generico algoritmo, non \textbf{all'} algoritmo specifico che risolve il problema specifico.Quindi l' algoritmo che non risolve il problema a mio parere è comunque un algoritmo.Non risolve quel problema, magari potrebbe addirittura risolverne un'altro (la professoressa stessa faceva l'esempio dell'algoritmo per la risoluzione di somme a due decimali, che però non funziona a n decimali).\\
+		Quindi volendo includere la correttezza tra le proprietà secondo me bisognerebbe specificare che questa è la definizione di \textit{un algoritmo risolutivo per il problema x}.\\
+	Naturalmente mi rendo conto che questo secondo punto è veramente un esempio del "voler cercare il pelo nell'uovo" ciononostante credo sia una valida argomentaizione. 
+\end{enumerate}
+\subsection{Proprietà di un algoritmo}
+\begin{itemize}
+	\item Finitezza: l'algoritmo deve terminare dopo un numero finito di passi
+	\item[--]io suddividerei in 2 parti la proprietà di \textbf{Precisione}. 
+		\begin{itemize}
+	\item Univocità delle istruzioni: Un algortimo deve essere composto da istruzioni non equivoche.
+	\item Semplicità delle istruzioni: Le istruzioni devono essere semplici ed eseguibili dall'interprete per cui viene scritto l'algoritmo.
+		\end{itemize}
+	\item Dati in ingresso e in uscita: Un algortimo deve accettare zero o più input e deve fornire uno o più output che devono essere dipendenti dagli input immessi.
+	\item Fattiblità: L'algoritmo deve essere implementabile, non ci possono essere operazioni astratte e non eseguibili.
+	\item Efficienza: I passi dell'algoritmo devono tutti concorrere alla soluzione del problema, non ci devono essere passi che non avanzano la computazione.\\
+		Nota, ciò è diverso da dire che un algoritmo per essere tale deve essere ottimizzato o efficiente, secondo me anche un algoritmo pessimo è un algortimo, basta che non faccia operazioni inutili.
+
+\end{itemize}
+Come discusso in precedenza io non inserirei la \textbf{correttezza} tra le proprietà di un algoritmo.
+\end{document}
