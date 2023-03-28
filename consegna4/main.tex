@@ -1,0 +1,90 @@
+\documentclass[a4paper]{article}
+\setcounter{secnumdepth}{3}
+\usepackage{listings}
+\usepackage{qtree}
+\usepackage{xcolor}
+\usepackage{forest}
+\usepackage{multicol}
+\setlength{\columnsep}{3cm}
+\usepackage{parskip}
+\usepackage{changepage}
+\usepackage[T1]{fontenc}
+\usepackage{amsmath}
+\usepackage{hyperref}
+\usepackage{listings}
+\usepackage{amsthm}
+\usepackage{amssymb}
+\usepackage{float}
+\usepackage[utf8]{inputenc}
+\usepackage{graphicx}
+\usepackage[italian]{babel}
+\usepackage{thmtools}
+\usepackage{csquotes}
+\usepackage{biblatex}
+\graphicspath{{figures/}}
+\usepackage{xcolor}
+\addbibresource{refs.bib}
+
+\begin{document}
+
+\author{Lorenzo Dentis, lorenzo.dentis@edu.unito.it}
+\title{Consegna 5 \\ \large Misconception}
+\maketitle
+
+\section{Domande}
+Partendo dall'appendice A della  tesi Visual Program Simulation in Introductory Programming Education.
+
+\begin{enumerate}
+
+	\item Provare a classificare le misconceptions in base al tipo di  difficoltà (sintattica, concettuale, strategica), scrivetene alemno 5 per categoria nella consegna.
+	\item Data la vostra esperienza (di studenti delle superiori, di studenti universitari, alcuni di voi come tutor, alcuni di voi come persone che fanno ripetizioni), provate ad elencare “misconception” nella programmazione in cui vi siete imbattuti, personalmente o in altri.
+	\item Come le avete risolte?
+\end{enumerate}
+\section{Risposte}
+\subsection{1 Classificare misconseptions}
+Misconception \textbf{sintattiche}:
+\begin{enumerate}
+	\item \textbf{[10]}Variables always receive a particular default value upon creation.
+	\item \textbf{[38]}A return values does not need to be stored (even if one needs it later)
+	\item \textbf{[80]}An object is a subset of a class. / A class is a collection of objects.
+	\item \textbf{[125]}Cannot have methods with the same name in different classes
+	\item \textbf{[160]}Confusing textual representations with each other, e.g., the string “456” with the number.
+	
+\end{enumerate}
+Misconception \textbf{concettuali}:
+\begin{enumerate}
+	\item \textbf{[8]}Magical parallelism: several lines of a (simple non- concurrent) program can be simultanenously active or known.
+	\item \textbf{[16]}Assignment moves a value from a variable to another.
+	\item \textbf{[47]}Subprograms can (routinely) use the variables of calling subprograms.
+	\item \textbf{[67]}Assigning to an object causes it to become equal to the assigned object.
+	\item \textbf{[124]}Objects ‘know’ which methods are operating on them (rather than method calls ‘knowing’ which object they operate on)
+\end{enumerate}
+Misconception \textbf{strategiche}:
+\begin{enumerate}
+	\item \textbf{[4]}The system does not allow unreasonable operations.
+	\item \textbf{[17]}The natural-language semantics of variable names affects which value gets assigned to which variabl
+	\item \textbf{[33]}loops terminate as soon as condition changes to false.
+	\item \textbf{[54]}Null model of recursion: recursion is impossible.
+	\item \textbf{[158]}Confusion between data in memory and data on screen.
+\end{enumerate}
+\subsection{2/3 Misconseption incontrate e come sono state risolte}
+\textit{11 Primitive assignment works in opposite direction.}
+Probabilmente questa misconception deriva dalla matematica o dal metodo di scrittura "da sinistra a destra", però ricordo che quando ho iniziato a programmare trovavo più naturale che il valore venisse preso da sinistra e portato a destra dell'uguale.
+Questa misconception è stata di facile risoluzione in quanto una volta identificato cosa stavo sbagliando è stato solo una questione di ricordarmi "l'assegnamento va verso sinistra" o alla peggio lanciare il programma, realizzare il mio errore e girare l'assegnamento.\\\\
+%ma posso mettere misconseption che non sono nel documento? probabilmente sì
+Una misconseption simile alla \textit{22 Unassigned variables of primitive type (in Java) have no memory allocated.} ma diametralmente opposta mi è capitato di vederla nel corso di SO. Il collega sosteneva che si poteva allocare dinamicamente memoria come in java, senza bisogno di chiamate alla \texttt{malloc}.\\
+Ad esempio tentava di fare la seguente operazione: 
+\begin{lstlisting}
+float read_and_process(int n)
+{
+    float vals[n];
+    ....
+}
+\end{lstlisting}
+Il motivo era che al posto di compilare da riga di comando con i parametri specificati dal professore (usando C90) il collega usava un IDE che di default aveva impostato C99. Per risolvere la misconception è bastato che il professore gli mostrasse il changelog di C99 in cui venivano introdotti i variable-length array e lo obbligasse a compilare da riga di comando.\\\\
+Ma la misconseption più comune che mi è capitato di incontrare è stata la \textit{1 The computer knows the intention of the program or of a piece of code, and acts accordingly}.Soprattutto nelle scuole superiori succedeva spessissimo che venissero giustificati errori nel codice con la frase "si ma io ovviamente intendevo questo" e la risposta del mio professore era sempre "il computer è una macchina stupida, si limita a fare ciò che gli dite di fare".
+Trovo che questa misconception sia la più pericolosa ed anche la più difficile da "risolvere" in quanto spesso durante la programmazione bisogna fare degli assunti sul funzionamento di un programma, una libreria o un sistema ipotizzando che il sistema si comporti in un certo modo piuttosto che un altro.
+Lei professoressa citava ad esempio il "perdere il filo" dello sviluppo durante il passaggio da una fase all'altra dello sviluppo software in SAS, questa cosa capitava costantemente.
+Ricordo che nel mio gruppo ricontrollavamo più e più volte di aver considerato tutto e comunque ci si rendeva conto di aver perso pezzi tra una fase e l'altra e si doveva tornare alla fase precendente per aggiustare.
+Credo che questa misconception si risolva in due soli modi: tramite l'esperienza con l'uso di un sistema specifico/la ripetizione di una procedura (nel caso dello sviluppo software) e tramite la lettura della documentazione dove c'è scritto "il sistema fa questo e non fa quest'altro", operazione che richiede sempre un certo dispendio di tempo.
+\end{document}
