@@ -1,0 +1,58 @@
+\documentclass[a4paper]{article}
+\setcounter{secnumdepth}{3}
+\usepackage{listings}
+\usepackage{xcolor}
+\usepackage{multicol}
+\setlength{\columnsep}{3cm}
+\usepackage{parskip}
+\usepackage{changepage}
+\usepackage[T1]{fontenc}
+\usepackage{amsmath}
+\usepackage{hyperref}
+\usepackage{listings}
+\usepackage{amsthm}
+\usepackage{amssymb}
+\usepackage{float}
+\usepackage[utf8]{inputenc}
+\usepackage{graphicx}
+\usepackage[italian]{babel}
+\usepackage{thmtools}
+\usepackage{csquotes}
+\graphicspath{{figures/}}
+\usepackage{xcolor}
+\usepackage{biblatex}
+\addbibresource{refs.bib}
+
+\begin{document}
+
+\author{Lorenzo Dentis, lorenzo.dentis@edu.unito.it}
+\title{Consegna 4 \\ \large Problem Solving}
+\maketitle
+
+\section{Domande}
+\begin{enumerate}
+	\item Leggete l'articolo Programming Patterns and Design Patterns in the Introductory Computer Science Course e scrivete un breve resoconto sull'approccio proposto.
+	\item Riportate il testo del problema analizzato per l'attività \textbf{2) Progettazione soluzione/algoritmo} e la soluzione che avete progettato.
+	\item Descrivete anche eventuali critiche (es. sulla formulazione del problema), problemi e considerazioni emerse durante l'attività.
+\end{enumerate}
+\section{Risposte}
+\subsection{1 Commento sull' articolo}
+Sono molto d'accordo con il metodo di insegnamento proposto dall'articolo \cite{articolo}, soprattutto perchè è molto affine al metodo che uso io per imparare.Quando incontro una nuova tecnologia o strumento traggo beneficio dal vederlo in uso in un esempio.
+L'articolo \cite{articolo} utilizza la stessa procedura in termini di Pattern, presentando un esempio subito dopo aver presentato il problema.
+Citando il documento (riferimento 4.2): \begin{quote} The Problem Examples section \textit{(n.d.a. seconda sezione)} gives a few examples with only a rudimentary reference to a programming language.\end{quote}
+Trovo che i Pattern presentati siano generici il giusto, affermo ciò perchè inconsciamente mi sono trovato ad inserirli nel problema che ci è stato chiesto di sviluppare.Senza sapere che erano Pattern mi sono trovato a pensare: "Questo costrutto ritorna spesso in programmazione, potrebbe essere interessante inserirlo nel problema".\\ 
+Durante la discussione in classe una mia collega aveva sollevato il dubbio che fornire la "soluzione pronta" andasse ad inficiare le capacità di problem solving, in linea generale sono molto d'accordo con la sua affermazione, ma non nel contesto di questo articolo. Infatti, sempre citando dalla sezione 4.2 dell'articolo:
+\begin{quote} The patterns are written to guide a novice with little or no programming experience who needs a more structured guidance in learning how to program.\end{quote}
+Secondo me utilizzare questa metodologia di insegnamento per problemi più sofisticati è controproducente.
+Una delle capacità più utili di uno sviluppatore è quella del \textbf{problem solving} unita all'esperienza di sapere cosa cercare quando si affronta un problema mai visto prima, se istruiamo gli studenti fornendogli Pattern prefabbricati con esempi e soluzioni questi non svilupperanno mai la capacità di trovare da soli una soluzione (anche suboptimale).
+Insomma l'articolo cerca di risolvere il problema posto dagli studenti \textit{"I do not even know where to start"} fornendo una strategia più guidata alla soluzione, peccato che nella mia esperienza il dubbio "da dove inizio ad affrontare questo problema?" è un dubbio quotidiano quando ho a che fare con l'informatica e si diventa più bravi ad risolvere questo problema solo affrontandolo e fallendo innumerevoli volte.\\
+Detto ciò, l'articolo \cite{articolo} non si propone come panacea per insegnare ogni concetto dell'informatica, benì si limita ad essere una strategia per \textit{un novizio con poca/nessuna esperienza di programmazione} e secondo me in ciò è eccellente.
+\subsection{2 Algoritmo di esempio}
+\subsubsection{Algoritmo Dentis}
+\texttt{Lo Chef Tony vuole che la sua cucina sia sempre in ordine e soprattutto sapere quali ingredienti ha a disposizione.\\Quindi ha suddiviso gli ingredienti in 5 categorie: \textit{pasta,sugo,carne,verdure e spezie}.\\Quando arriva un nuovo carico di materie prime (il numero di ingredienti in un carico può variare) Tony vuole che queste vengano separati automaticamente nelle 4 categorie e gli venga restituito in output quanti elementi di ogni categoria ci sono nel carico appena giunto.}\\\\
+Il problema può essere complicato come nella seguente variante \texttt{Il programma deve tenere conto che Tony non è l'unico Chef di Cat\&Ring, nella dispensa potrebbero esserci ingredienti rimasti, quindi deve chiedere allo Chef la quantità rimasta e comportarsi di conseguenza.}
+\subsubsection{Soluzione}
+% per la decomposizione in sottoproblemi, io so di aver usato http://csis.pace.edu/~bergin/patterns/Patternsv4.html (selection pattern, nell'articolo 3.6) perchè di base ho fatto uno switch. e traversal pattern (foreach, nell'articolo 3.5) che in realtà è inserito in un più ampio contesto (3.8 Cumulative Result Patterns)
+\subsection{3 Critiche e considerazioni}
+\printbibliography
+\end{document}
