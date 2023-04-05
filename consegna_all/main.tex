@@ -1,0 +1,394 @@
+\documentclass[a4paper]{article}
+\usepackage{listings}
+\usepackage{xcolor}
+\usepackage{forest}
+\usepackage{multicol}
+\setlength{\columnsep}{3cm}
+\usepackage{parskip}
+\usepackage{changepage}
+\usepackage[T1]{fontenc}
+\usepackage{amsmath}
+\usepackage{hyperref}
+\usepackage{listings}
+\usepackage{amsthm}
+\usepackage{amssymb}
+\usepackage{float}
+\usepackage[utf8]{inputenc}
+\usepackage{graphicx}
+\usepackage[italian]{babel}
+\usepackage{thmtools}
+\usepackage{csquotes}
+\usepackage{biblatex}
+\usepackage{enumitem}
+\graphicspath{{figures/}}
+\usepackage{xcolor}
+\addbibresource{refs.bib}
+
+\begin{document}
+
+\author{Lorenzo Dentis, lorenzo.dentis@edu.unito.it}
+\title{Consegne in itinere}
+\maketitle
+
+\section{Consegna 1 \large Domande parte introduttiva}
+
+\subsection{Domande}
+Rispondere alle seguenti domande. Le risposte devono essere motivate citando le letture indicate su moodle. Dovete esprimere la vostra opinione  rispetto alle posizioni espresse dagli articoli degli autori: siete d’accordo? se si/no perchè?
+\newline
+\begin{enumerate}
+	\item E’ importante insegnare informatica come materia scolastica?
+	\item L’informatica è una scienza?
+	\item Qui sotto trovate una lista di criteri estratti dall’articolo The Science in Computer Science. Sono usati dall’autore per definire la credibilità di un settore come “scienza”. Siete d’accordo con la scelta di questi criteri? Motivare le risposte:
+Organized to understand, exploit, and cope with a pervasive phenomenon.
+\begin{itemize}
+	\item Organized to understand, exploit, and cope with a pervasive phenomenon
+	\item Encompasses natural and artificial processes of the phenomenon.
+	\item Codified structured body of knowledge.
+	\item Commitment to experimental methods for discovery and validation.
+	\item Reproducibility of results.
+	\item Falsifiability of hypotheses and models.
+	\item Ability to make reliable predictions, some of which are surprising.
+\end{itemize}
+	L’informatica soddisfa qualcuno dei criteri sopra elencati? Se si quali? e perchè?
+\end{enumerate}
+\newpage
+\subsection{Risposte}
+\subsubsection{È importante insegnare informatica come materia scolastica?}
+Secondo me insegnare l'informatica nelle scuole è importante, ma ancor più importante è insegnare le competenze digitali.\\
+Ogni cittadino dovrebbe essere in grado di operare un computer o device digitale, perchè ci stiamo muovendo verso una società che per svoglere anche compiti necessare alla basilare sopravvivenza richiede di utilizzare dispositivi informatici. Saper utilizzare correttamente un computer e navigare su internet sta diventando una competenza basilare tanto quanto leggere e scrivere.\\
+\\
+Parlando invece di \emph{Informatica} invece credo che fornire delle basi sia importante.\\
+Come l'autore di "Informatica e competenze digitali: cosa insegnare? "\cite{insegnare} , anche io credo che la necessità dell'insegnamento di questa disciplina derivi dal voler \emph{"preparare i cittadini a comprendere appieno la società digitale"}.
+Trovo che l'Informatica come materia scolastica abbia molto in comune con la Storia, in quanto, anche nel caso in cui non rilevante nella crescita accademica di un individuo, è fondamentale per capire il mondo intorno a noi. Il manifesto per l'umanesimo digitale\cite{umanesimo} parla molto di come le teconologie dovrebbero essere adattate a supporto della libertà e della democrazia, ma secondo me deve esserci anche una modifica del comportamento umano nei confronti della tecnologia.\\
+Non si può avere democrazia senza conoscenza. Anche presuppondendo di avere un prodotto perfetto e costruito con le migliori intenzioni, che rispetta la privacy dell'utente e garantisce imparzialità, tale strumento è inutile se il suo utilizzatore non si fida e non ci può essere fiducia se prima lo strumento non viene compreso.
+Un buon esempio può essere il voto elettronico. Se anche venisse realizzata una piattaforma online perfetta poi bisognerebbe convincere le persone ad usarla.Io stesso, come immagino chiunque altro, mi rifiuterei di votare se questa fosse una "black box" dal funzionamento sconosciuto.
+
+Quindi concordo con l'affermazione \emph{"L‘educazione all‘informatica e al suo impatto sociale devono iniziare il prima possibile"}, tratta dal manifesto sopra citato,perchè bisogna fornire ai futuri cittadini le competenze per utilizzare e sopratutto comprendere il funzionamento dei nuovi strumenti tecnologici che permeano tutti gli aspetti della nostra vita.
+
+\subsubsection{L’informatica è una scienza?}
+\label{sec:Q2}
+Si, come affermato durante le lezioni ciò dipende molto da cosa si considera scienza e cosa no.
+Io mi rifaccio alla definizione data da Galileo Galilei, cioè che una disciplina è scienza quando rispetta il metodo scientifico.
+Quindi una disciplina che segue le seguenti fasi: osservazione di un fenomeno, misura del fenomeno, formulazione di una ipotesi, preparazione di un esperimento che provi l'ipotesi e che sia ripetibile. Nel caso dell'informatica ovviamente l'oggetto di studio è una informazione.\\
+In particolare io "traccio la linea di demarcazione" tra scienza e non scienza sulla ripetibilità di un esperimento. Ad esempio non considero scienza le scienze sociali o l'economia, perchè gli esperimenti non possono essere effettuati "in ambiente sterile" ed i risultati ottenuti da differenti esperimenti non saranno mai identici, perchè è impossibile partire dalle stesse condizioni di partenza.\\
+In informatica è invece partendo dalle stesse condizioni iniziali (che sono completamente controllabili) ed eseguendo lo stesso algoritmo si giunge sempre alle stesse conclusioni, l' informatica è deterministica.
+
+\subsubsection{Siete d’accordo con la scelta di questi criteri?}
+\emph{Organized to understand, exploit, and cope with a pervasive phenomenon.}\\
+Lo scopo della scienza è senza dubbio quello di dare una spiegazione ai fenomeni che avvengono intorno a noi.Gli altri 2 criteri "exploit and cope" trovo non appartengano tanto ad una disciplina scientifica quanto ad una disciplina \emph{Tecnica}.Secondo me, basterebbe il primo criterio, senza includere gli altri due, d'altra parte questi sono conseguenza del primo.Una volta compreso un fenomeno è naturale che spontaneamente sorgano metodi per sfruttare questa conoscenza, altrimenti non ci si sarebbe interessati al fenomeno in primo luogo.
+\\\\
+
+\emph{Encompasses natural and artificial processes of the phenomenon}.\\
+Anche riguardo a questo criterio non sono convinto, trovo sia irrilevante la natura del fenomeno.Non vedo perchè una disciplina che studi fenomeni artificiali non dovrebbe essere considerata scienza.
+\\\\
+
+\emph{Codified structured body of knowledge}.\\
+Si, credo che ogni scienza per essere considerata tale abbia bisogno di basi, siano questi gli assiomi ed i teoremi della matematica o le varie teorie della biologia.
+Come poi è strutturato questo insieme di informazioni dipende da una scienza all'altra, ma senza una struttura diventa "una storia", letteratura piuttosto che scienza.
+\\\\
+
+\emph{Commitment to experimental methods for discovery and validation}.\\
+Questo secondo me è il principale distinguo tra scienza e non scienza.Il metodo scientifico sviluppato da Galileo e la seguente elaborazione di Bacon sono a mio parere il punto di partenza per ogni scienza.Ad una ipotesi deve sempre seguire una validazione logica e sperimentale, altrimenti non si può considerare provata una teoria.
+\\\\
+
+\emph{Reproducibility of results}.\\
+Tale criterio segue dal criterio precedente, un esperimento per essere considerato rilevante deve essere ripetibile, come scritto nella domanda \ref{sec:Q2}, non credo che le discipline che non soddisfano tale requisito siano definibili \emph{scienza}
+\\\\
+
+\emph{Falsifiability of hypotheses and models}.\\
+La scienza deve avere la possibilità di evolversi con il susseguirsi di nuove scoperte, non c'è posto nella scienza per concetti immutabili o "atti di fede".Anche le teorie più solide devono essere falsificabili.Come nel caso del famoso "paradosso dei corvi" \cite{corvi}, basta una controprova per rendere falsa una teoria.
+\\\\
+
+\emph{Ability to make reliable predictions, some of which are surprising.}\\ Mi interrogo sul perchè una scienza debba per forza ottenere risultati sorprendenti, dato che questo è un metro di valutazione soggettivo.Invece riguardo all'abilita di fare predizioni sono abbastanza convinto.Come accennato nel primo punto è una naturale conseguenza della comprensione di un fenomeno.
+
+\subsubsection{Quali criteri soddisfa l'informatica?}
+\emph{Organized to understand, exploit, and cope with a pervasive phenomenon.}\\
+Il fenomeno pervasivo che l'informatica studia è l'informazione e l'elaborazione della stessa.Non credo esista nulla di più pervasivo delle informazioni. Ogni fenomeno porta con se informazioni, dal comportamento umano alla biologia alla chimica.I metodi con cui noi umani abbiamo imparato a sfruttare la raccolta e l'elaborazione di informazioni sono abbastanza palesi, il primo che mi viene in mente è Internet.
+\\\\
+
+\emph{Encompasses natural and artificial processes of the phenomenon}.\\
+Come dice il documento di Peter J. Denning\cite{isScience} l'arogmentazione "l'informatica studia solo processi artificiali" cade quando si considera il fatto che l'informatica è la disciplina che studia le informazioni, non le tecnologie.
+L'articolo \cite{isScience}invita anche a dibattere sul fatto che tutte le informazioni trattate dall'informatica derivano da fenomeni artificiali, anche le previsioni del tempo di un algoritmo metereologico non sono lo studio dell'evento metereologico in se, ma lo studio della simulazione dello stesso. Ciò non toglie che "le informazioni" non sono per forza artificiali, anche una reazione chimica porta con se delle informazioni, quindi io credo che l'informatica soddisfi questo criterio, seppur non strettamente.\\ \\
+
+\emph{Codified structured body of knowledge}.\\La conoscenza dell'informatica è basata su principi teorici, modelli matematici e algoritmi che sono stati sviluppati e codificati nel corso degli anni. Basti pensare a tutti gli studi di informatica teorica quali algoritmi, complessità e calcolabilità, ma io includerei anche argomenti come i sistemi operativi, le reti, la sicurezza informatica, l'analisi dei dati, l'intelligenza artificiale e molti altri. \\\\
+
+\emph{Commitment to experimental methods for discovery and validation}.\\Questo è un altro punto su cui si può dibattere, in quanto l'informatica di uso quotidiano non fa uso di esperimenti.Quando viene scritto un software difficilmente viene prima validato (nonostante ci siano strumenti per farlo).D'altra parte si potrebbe considerare l'uso da parte dell'utente come una sperimentazione, in quanto il software viene costantemente aggiornato, una specie di sperimentazione sul campo.\\In ogni caso questa argomentazione decade quando si pensa a software sviluppato per scopo di ricerca.Mi viene in mente l'esempio del Q-learning, algoritmo di apprendimento automatico che si basa proprio sull'idea di effettuare molte azioni differenti e trovare quella che fornisce un risultato migliore in fase di addestramento, cioè esattamente sperimentare differenti strategie finchè nion si trova quella migliore.\\\\
+
+\emph{Reproducibility of results}.\\Ho ampiamente discusso di questo punto nella domanda precendente \ref{sec:Q2}.Partendo da un ambiente controllato, situazione molto semplice da produrre in informatica dato che siamo noi a generare gli input, gli algoritmi utilizzati produrranno output prevedibili.\\\\
+
+\emph{Falsifiability of hypotheses and models}.\\Come ho accenanto in precedenza ci sono metodi formali per la validazione del software, che poi questi non vengano usati è un altro discorso.Il documento di Peter J.Denning fa lo stesso ragionamento (portando a supporto di questa tesi il fatto che circa il 50\% dei modelli e delle ipotesi proposte non erano state rigorosamente testate).Direi che l'informatica soddisfa questo requisito se non fosse per alcuni problemi indecidibili, primo tra tutti l'\emph{halting problem} di Turing.In informatica (come in matematica) ci sono dei problemi indecidibili, di conseguenza non tutte le ipotesi ed i modelli sono verificabili falsi.Quindi a mio parere l'informatica non soddisfa questo criterio.\\\\
+
+\emph{Ability to make reliable predictions, some of which are surprising.}\\Riguardo al fatto che l'informatica permetta di effettuare predizioni ho già speso molte parole.Sul fatto che siano sorprendeti mi sento di affermare che senza dubbio l'informatica permette di fare scoperte quantomeno non intuitive.
+I risultati delle scoperte informatiche hanno radicalmente cambiato il mondo forse più di quanto qualsiasi altra scienza abbia fatto.Un esempio di predizione sorprendente a mio parere è la teoria della complessità. Un problema semplice come le torri di Hanoi quando viene esteso sopra una certa soglia richiede un tempo computazionale sorprendente, cosa che non ci si aspetterebbe.
+
+\section{Consegna 2 \large Numeri Binari}
+\subsection{Domande}
+Qual è il tema/concetto informatico oggetto dell’attività?\\
+
+Quali sono gli obiettivi formativi?\\
+
+Suddividete l’attività in fasi e per ogni fase individuate snodi  e indicatori\\
+
+Quali ingredienti delle varie teorie/metodologie viste nelle lezioni precedenti trovate in questa attività?\\
+
+Riuscite a individuare nel testo dell’attività suggerimenti per il /la docente? secondo voi quali altre indicazioni devono essere integrate volendo rendere il documento una guida “completa” rispetto a snodi e indicatori?\\
+
+\newpage
+\subsection{Risposte}
+\subsubsection{1 Qual è il tema/concetto informatico oggetto dell’attività?} 
+Il tema è la codifica del dato in binario.Come rappresentare i numeri decimali in notazione binaria
+
+\subsubsection{2 Quali sono gli obiettivi formativi?}
+Io ho indivuato 4 obiettivi formativi
+\begin{itemize}
+	\item O-P5-D-1. utilizzare combinazioni di simboli per rappresentare informazioni familiari complesse (es. colori secondari, frasi, ...);\\
+		In questo caso i simboli sono prima le carte, poi i numeri binari.
+	\item O-P5-N-3. comprendere come la riservatezza delle informazioni digitali può essere tutelata mediante codici "segreti";\\
+		I numeri binari sono un esempio di codifica, per quanto basilare.Già questo può dare un idea di come "celare" dei dati, tale argomento viene approfondito soprattutto nella parte "extra", a pag 13.  
+	\item O-M-D-1. riconoscere se due rappresentazioni alternative semplici della stessa informazione sono intercambiabili per i propri scopi;\\
+		Anche se è un obbiettivo da scuola secondaria credo sia presente. In questo caso però non viene evidenziato il parallelismo binario-decimale ne gli scopi
+	\item O-M-D-2. effettuare operazioni semplici su simboli che rappresentano informazione strutturata (es. numeri binari, immagini "bitmap");\\ 
+		Anche se è un obbiettivo da scuola secondaria questo obiettivo è decisamente presente. L'informazione è strutturata, per quanto la struttura sia decisamente semplice.
+\end{itemize}
+\subsubsection{3 Suddividete l’attività in fasi e per ogni fase individuate snodi  e indicatori}
+\paragraph{Fase 1, comprendere i Bit}
+In questa fase vengono mostrate le carte agli alievi in modo da fargli comprendere le relazioni tra una carta (un bit) e l'altra.
+\begin{itemize}
+	\item \textbf{snodi}
+		\begin{itemize}[label={--}]
+			\item Comprendere il valore posizionale delle carte (ogni carta ha valore diverso in base alla posizione)
+			\item Comprendere la relazione tra una carta e la successiva (ogni carta ha valore doppio della carta alla sua destra)
+		\end{itemize}
+	\item \textbf{indicatori}
+		\begin{itemize}[label={--}]
+			\item Lo studente capisce che ogni carta ha il doppio dei punti della carta immediatamente alla destra
+			\item Lo studente è in grado di ipotizzare che valore avrebbe una nuova carta posta a sinistra dell'ultima.
+		\end{itemize}
+
+\end{itemize}
+\paragraph{Fase 2, comprendere il Byte}
+In questa fase non consideriamo più la singola carta, bensì le 5 carte nel loro insieme (potremmo definirlo un byte).
+\begin{itemize}
+	\item \textbf{snodi}
+		\begin{itemize}[label={--}]
+			\item Capire a che valore decimale corrisponde una precisa combinazione di carte.
+			\item Essere in grado di passare dal valore numerico alla combinazione e viceversa.
+			\item Comprendere la relazione tra numero di carte e possibili valori rappresentabili.
+			\item Comprendere che ogni possibile numero (nel range consentito dalle carte) è rappresentabile in binario.
+		\end{itemize}
+	\item \textbf{indicatori}
+		\begin{itemize}[label={--}]
+			\item L'allievo è in grado di capire il valore rappresentato da una combinazione di carte.
+			\item Dato un valore l'allievo è in grado di girare le carte corrette.
+			\item L'allievo è in grado di dire qual'è il massimo valore rappresentabile con 5 carte e aggiungendo una carta come cambia.
+			\item L'allievo sa qual'è il minimo numero rappresentabile.
+			\item L'allievo è in grado di contare.  
+		\end{itemize}
+\end{itemize}
+\paragraph{Fase 3, astrarre dalle carte}
+In questa fase abbandoniamo le carte ed astraiamo ai numeri decimali.Questa fase comprende anche il foglio di lavoro a pag 13.
+\begin{itemize}
+	\item \textbf{snodi}
+		\begin{itemize}[label={--}]
+			\item Passare agevolmente da un numero decimale ad uno binario.
+			\item Comprendere che ci sono molti modi di rappresentare un numero binario, le carte o i disegni sono solo uno di questi. (in pratica comprendere che il binario, ed anche il decimale, sono solo un modo differente di rappresentare un numero)
+		\end{itemize}
+	\item \textbf{indicatori}
+		\begin{itemize}[label={--}]
+			\item L'alunno è capace di passare agevolmente dalla notazione decimale a quella binaria, senza l'ausilio delle carte.
+			\item Qualora gli sia presentato un numero binario in forma differente (i disegni nella parte extra) è in grado di rendersi conto che si tratta comunque di un numero.
+		\end{itemize}
+\end{itemize}
+\subsubsection{4 Quali ingredienti delle varie teorie/metodologie viste nelle lezioni precedenti trovate in questa attività?}
+Costruttivismo, nella fattispecie l'apprendimento attivo, dato che ai bambini già dalla fase uno viene chiesto di interagire con gli strumenti per trovare una soluzione ad un problema. Citando Piaget nelle slides \emph{i processi cognitivi tendono verso la viabilità, servono al soggetto per organizzare il mondo esperienziale e non per scoprire una realtà ontologica oggettiva.}
+In questa attività per poter rispondere alla domanda "che valore avrebbe una nuova carta posta a sinistra dell'ultima?"lo studente deve aver compreso che ogni carta ha il doppio del valore della carta precedente.\\
+Oltretutto l'insegnante ha una influenza marginale sulla comprensione, il bambino impara autonomamente tramite una esperienza diretta con lo strumento (le carte), si verifica un processo di \textbf{scoperta attiva}.\\
+
+Nell'attività proposta vi è anche un po' di Socio-costruttivismo, in quanto nelle prime 2 fasi gli studenti collaborano per giungere ad una risposta (ad esempio vengono scelti degli studenti per reggere le carte mentre altri cercano risposte alle domande) ed in generale è incentivato il \textbf{collaborative learning} ed il confronto.
+
+Riscontro inoltre la presenza della strategia \textbf{Learning Cycle Instructional Models (5E)}, anche se mancano alcune fasi, come la valutazione.In ogni caso si rifà molto al processo descritto da Piaget ed analizzato nel documento \emph{The Gears of My Childhood} \cite{gears} in cui le conoscenze vengono trasmesse incrementalmente, poggiandosi su basi pregresse.
+
+\subsubsection{5 che attività vengono suggerite al docente? come integrarle?}
+Le attività suggerite al docente sono:
+\begin{enumerate}
+	\item Portare 5 studenti alla cattedra e formure ad ognuno una carta, poi cercare di far comprendere al resto della classe la regola che definisce il valore delle carte
+	\item Chiedere alla classe di fare ipotesi sul valore di carte successive
+	\item Scrivere diversi numeri in binario coprendo o scoprendo le carte
+	\item Chiedere agli studenti di fare lo stesso
+	\item Chiedere agli studenti il minimo numero rappresentabile e successivamente contare
+	\item Chiedere agli studenti di convertire da binario a decimale e viceversa senza l'ausilio delle carte
+	\item Passare ad altre rapresentazioni (spunte, picche, cerchi,etc..).
+\end{enumerate}
+Io integrerei qualche attività/domanda per far comprendere meglio il fatto che il valore della carta dipende dalla sua posizione, cioè non posso mettermi a spostare le carte come mi pare.\\
+Ad esempio al posto degli studenti (che si possono muovere) fisserei le carte su una bacheca e chiederei agli studenti di coprirle/scoprirle con un foglio.\\
+
+L'altra cosa che farei è dedicare più tempo al conteggio, contando dal valore minimo (0) al valore massimo (32), facendoglio notare che non è possibile rappresentare un numero maggiore. Cioè renderei subito chiaro qual'è il range di valori rappresentabili e come incrementarlo (aggiungere una carta).
+
+\section{Consegna 3 \large Algoritmo}
+\subsection{Domande}
+Tenendo conto delle discussioni svolte a lezione sulla definizione di algoritmo e  delle sue proprietà scrivete una vostra definizione di algoritmo e delle sue proprietà motivando eventuali differenze rispetto alla formulazione vista a lezione. Nello svolgere  questo compito tenete presente che la discussione sulle definizioni deve essere rivolta a classi delle scuole secondarie di secondo grado senza prerequisiti particolari.
+\subsection{Risposte}
+\subsubsection{Definizione di algoritmo}
+Io ricordo che algoritmo mi fu definito come "una sequenza finita di istruzioni elementari per giungere da un problema ad una soluzione". Ad una ipotetica classe delle scuole secondarie di secondo grado riproporrei questa definizione, perchè riesce ad essere sufficientemente precisa ma è soprattutto molto succinta e facile da memorizzare e comprendere (tanto che ancora adesso la ricordo). Certo non è la definizione più esaustiva e formale, però nella sua semplicità mi piace molto.\\
+Volendo andare nel dettaglio, e basandomi sulla discrussione in classe, definirei un algoritmo come \emph{Una sequenza finita e ordinata di istruzioni elementari univoche che da un problema porta alla sua soluzione.}\\
+Non è molto differente dalla definizione data in classe, secondo me è un po' migliore in quanto mette in evidenza il fatto che l'ordine di esecuzione delle istruzioni è molto importante, in secondo luogo credo che questa definizione sia più esplicita riguardo al fatto che l'algoritmo non è la soluzione, l'algoritmo associa un problema alla sua soluzione.\\\\
+In questo sono della stessa idea del mio collega Cacioli (di cui ho sentito le argomentazioni nelle videoregistrazioni), secondo la mia interpretazione un algoritmo non deve essere corretto per essere considerato tale.Un algoritmo sbagliato è comunque un algoritmo, per due motivi.
+\begin{enumerate}
+	\item Per quanto sia possibile verificare formalmente un algoritmo tale operazione non viene quasi mai svolta, quindi potrebbero esserci degli \textit{"edge cases"} che vanno a vanificare la correttezza di un sacco di algoritmi.Probabilmente tali casi non ci sono, o sono rarissimi, ma senza una verifica formale non si può affermare che un algoritmo sia veramente corretto e basare la definizione di algoritmo su un assunto così forte mi sembra un po' troppo stringente.
+		(Ricordo che il professor Roversi nel corso di Algoritmi e complessità in maniera provocatoria affermava: "Voi avete formalmente dimostrato che il quicksort fornisce una lista ordinata di elementi?No, vi basate sulla fiducia.Siete sicuri che qualcuno lo abbia mai dimostrato?")
+	\item Volendo essere molto precisi quando si sta parlando di \textbf{un} algoritmo ci si riferisce ad un generico algoritmo, non \textbf{all'} algoritmo specifico che risolve il problema specifico.Quindi l' algoritmo che non risolve il problema a mio parere è comunque un algoritmo.Non risolve quel problema, magari potrebbe addirittura risolverne un'altro (la professoressa stessa faceva l'esempio dell'algoritmo per la risoluzione di somme a due decimali, che però non funziona a n decimali).\\
+		Quindi volendo includere la correttezza tra le proprietà secondo me bisognerebbe specificare che questa è la definizione di \textit{un algoritmo risolutivo per il problema x}.\\
+	Naturalmente mi rendo conto che questo secondo punto è veramente un esempio del "voler cercare il pelo nell'uovo" ciononostante credo sia una valida argomentaizione.
+\end{enumerate}
+\subsubsection{Proprietà di un algoritmo}
+\begin{itemize}
+	\item Finitezza: l'algoritmo deve terminare dopo un numero finito di passi
+	\item[--]io suddividerei in 2 parti la proprietà di \textbf{Precisione}.
+		\begin{itemize}
+	\item Univocità delle istruzioni: Un algortimo deve essere composto da istruzioni non equivoche.
+	\item Semplicità delle istruzioni: Le istruzioni devono essere semplici ed eseguibili dall'interprete per cui viene scritto l'algoritmo.
+		\end{itemize}
+	\item Dati in ingresso e in uscita: Un algortimo deve accettare zero o più input e deve fornire uno o più output che devono essere dipendenti dagli input immessi.
+	\item Fattiblità: L'algoritmo deve essere implementabile, non ci possono essere operazioni astratte e non eseguibili.
+	\item Efficienza: I passi dell'algoritmo devono tutti concorrere alla soluzione del problema, non ci devono essere passi che non avanzano la computazione.\\
+		Nota, ciò è diverso da dire che un algoritmo per essere tale deve essere ottimizzato o efficiente, secondo me anche un algoritmo pessimo è un algortimo, basta che non faccia operazioni inutili.
+
+\end{itemize}
+Come discusso in precedenza io non inserirei la \textbf{correttezza} tra le proprietà di un algoritmo.
+\section{Consegna 5 \large Misconception}
+
+\subsection{Domande}
+Partendo dall'appendice A della  tesi Visual Program Simulation in Introductory Programming Education.
+
+\begin{enumerate}
+
+	\item Provare a classificare le misconceptions in base al tipo di  difficoltà (sintattica, concettuale, strategica), scrivetene alemno 5 per categoria nella consegna.
+	\item Data la vostra esperienza (di studenti delle superiori, di studenti universitari, alcuni di voi come tutor, alcuni di voi come persone che fanno ripetizioni), provate ad elencare “misconception” nella programmazione in cui vi siete imbattuti, personalmente o in altri.
+	\item Come le avete risolte?
+\end{enumerate}
+\subsection{Risposte}
+\subsubsection{1 Classificare misconseptions}
+Misconception \textbf{sintattiche}:
+\begin{enumerate}
+	\item \textbf{[10]}Variables always receive a particular default value upon creation.
+	\item \textbf{[38]}A return values does not need to be stored (even if one needs it later)
+	\item \textbf{[80]}An object is a subset of a class. / A class is a collection of objects.
+	\item \textbf{[125]}Cannot have methods with the same name in different classes
+	\item \textbf{[160]}Confusing textual representations with each other, e.g., the string “456” with the number.
+
+\end{enumerate}
+Misconception \textbf{concettuali}:
+\begin{enumerate}
+	\item \textbf{[8]}Magical parallelism: several lines of a (simple non- concurrent) program can be simultanenously active or known.
+	\item \textbf{[16]}Assignment moves a value from a variable to another.
+	\item \textbf{[47]}Subprograms can (routinely) use the variables of calling subprograms.
+	\item \textbf{[67]}Assigning to an object causes it to become equal to the assigned object.
+	\item \textbf{[124]}Objects ‘know’ which methods are operating on them (rather than method calls ‘knowing’ which object they operate on)
+\end{enumerate}
+Misconception \textbf{strategiche}:
+\begin{enumerate}
+	\item \textbf{[4]}The system does not allow unreasonable operations.
+	\item \textbf{[17]}The natural-language semantics of variable names affects which value gets assigned to which variabl
+	\item \textbf{[33]}loops terminate as soon as condition changes to false.
+	\item \textbf{[54]}Null model of recursion: recursion is impossible.
+	\item \textbf{[158]}Confusion between data in memory and data on screen.
+\end{enumerate}
+\subsubsection{2/3 Misconseption incontrate e come sono state risolte}
+\textit{11 Primitive assignment works in opposite direction.}
+Probabilmente questa misconception deriva dalla matematica o dal metodo di scrittura "da sinistra a destra", però ricordo che quando ho iniziato a programmare trovavo più naturale che il valore venisse preso da sinistra e portato a destra dell'uguale.
+Questa misconception è stata di facile risoluzione in quanto una volta identificato cosa stavo sbagliando è stato solo una questione di ricordarmi "l'assegnamento va verso sinistra" o alla peggio lanciare il programma, realizzare il mio errore e girare l'assegnamento.\\\\
+%ma posso mettere misconseption che non sono nel documento? probabilmente sì
+Una misconseption simile alla \textit{22 Unassigned variables of primitive type (in Java) have no memory allocated.} ma diametralmente opposta mi è capitato di vederla nel corso di SO. Il collega sosteneva che si poteva allocare dinamicamente memoria come in java, senza bisogno di chiamate alla \texttt{malloc}.\\
+Ad esempio tentava di fare la seguente operazione:
+\begin{lstlisting}
+float read_and_process(int n)
+{
+    float vals[n];
+    ....
+}
+\end{lstlisting}
+Il motivo era che al posto di compilare da riga di comando con i parametri specificati dal professore (usando C90) il collega usava un IDE che di default aveva impostato C99. Per risolvere la misconception è bastato che il professore gli mostrasse il changelog di C99 in cui venivano introdotti i variable-length array e lo obbligasse a compilare da riga di comando.\\\\
+Ma la misconseption più comune che mi è capitato di incontrare è stata la \textit{1 The computer knows the intention of the program or of a piece of code, and acts accordingly}.Soprattutto nelle scuole superiori succedeva spessissimo che venissero giustificati errori nel codice con la frase "si ma io ovviamente intendevo questo" e la risposta del mio professore era sempre "il computer è una macchina stupida, si limita a fare ciò che gli dite di fare".
+Trovo che questa misconception sia la più pericolosa ed anche la più difficile da "risolvere" in quanto spesso durante la programmazione bisogna fare degli assunti sul funzionamento di un programma, una libreria o un sistema ipotizzando che il sistema si comporti in un certo modo piuttosto che un altro.
+Lei professoressa citava ad esempio il "perdere il filo" dello sviluppo durante il passaggio da una fase all'altra dello sviluppo software in SAS, questa cosa capitava costantemente.
+Ricordo che nel mio gruppo ricontrollavamo più e più volte di aver considerato tutto e comunque ci si rendeva conto di aver perso pezzi tra una fase e l'altra e si doveva tornare alla fase precendente per aggiustare.
+Credo che questa misconception si risolva in due soli modi: tramite l'esperienza con l'uso di un sistema specifico/la ripetizione di una procedura (nel caso dello sviluppo software) e tramite la lettura della documentazione dove c'è scritto "il sistema fa questo e non fa quest'altro", operazione che richiede sempre un certo dispendio di tempo.
+
+\section{Consegna 6 \large la natura dei programmi}
+
+\subsection{Domande}
+Partendo dal materiale relativo al seminario tenuto dalla Dott.ssa Violetta Lonati Di cosa parliamo quando parliamo di programmi scrivete una breve riflessione su questi aspetti:
+\begin{itemize}
+	\item Nei corsi di studio che avete affrontato sono emerse tutte le sfaccettature del concetto di programma presentate nel seminario?
+	\item Guardando le indicazioni nazionali del laboratorio Informatica e Scuola del cini e quelle degli istituti superiori vi sembra che includano tutte le 6 facce dei programmi?
+	\item Dovendo progettare un intero corso di scienze informatiche in una scuola superiore in che ordine presentereste le 6 sfaccettature?
+\end{itemize}
+\subsection{Risposte}
+\subsubsection{1 Esperienze personali}
+Ho frequentato il liceo scientifico delle scienze applicate e ho avuto la fortuna di avere un buon insegnante di informatica.
+Abbiamo coperto quasi tutti i sei campi, ma ci siamo concentrati principalmente sui programmi come oggetti nozionali, approfondendo molto il linguaggio C ad esempio, e sui programmi come oggetti astratti, con molta enfasi sulla differenza tra algoritmo e codice e sul problem solving piuttosto che sulla scrittura di codice.
+È stato dato molto spazio anche al tema dei programmi come entità eseguibili, poiché abbiamo fatto molta programmazione.
+
+
+Contrariamente a quanto si potrebbe pensare, non abbiamo visto molto il programma come strumento, ricordo pochi riferimenti alle competenze digitali o all'informatica in ambito interdisciplinare. Tuttavia, abbiamo utilizzato strumenti a supporto dello sviluppo di algoritmi o della scrittura di codice, come Scratch, Algobuild e vari IDE.\\
+Non è stata quasi affrontata la visione del programma come opera dell'uomo, ad eccezione di una lezione in cui sono stati affrontati aspetti del ruolo dell'informatica nella storia, parlando di Alan Turing e della macchina Colossus.
+Non è stato affrontato il tema del programma come oggetto fisico, nonostante una breve introduzione all'hardware, all'architettura e alle reti, ma mai in relazione ai programmi.
+Il professore ha però proposto una attività facoltativa durante una autogestione riguardo alla programmazione di microcontrollori (Arduino)
+
+
+In ambito universitario sono state ampiamente approfondite tutte e sei le sfaccettature.
+\subsubsection{2 Indicazioni delle scuole}
+Gli obbiettivi ed i traguardi nel documento del CINI mi sembra affrontino tutte e sei le sfaccettature. Nella scuola primaria si nota una prevalenza di programma visto come \textbf{entità astratte} e come \textbf{strumento} ad esempio T-P-1, T-P-2 e T-P-11. Tutti gli obbiettivi raccolti sotto l' \textit{Ambito creatività digitale} sono una visione di \textbf{programma come strumento}.\\
+Si può dire che nella scuola primaria manchi la visione di programmi come \textbf{opere dell'uomo}, \textbf{oggetti fisici} ed \textbf{entità eseguibili} ma il motivo di tale carenza è probabilmente dovuto al fatto che questi concetti sono più astratti e difficili da afferarre per uno studente senza altre basi. Tale discorso non regge però per la sfaccettatura "opere dell'uomo", si potrebbe tranquillamente mostrare anche nella scuola primaria tutto il discorso di programma come derivato di un’analisi dei requisiti o delle scelte di chi il programma lo "produce".
+
+
+Invece vedo che sia nelle scuole secondarie che negli istituti superiori vengono incluse tutte le 6 facce dei programmi, anche il programma visto come opera dell'uomo.
+\subsubsection{3 Ordine di presentazione}
+Dovendo scegliere proporrei questo ordine:
+\begin{enumerate}
+	\item Entità astratte
+	\item Artefatti linguistico-notazionali
+	\item Entità eseguibili
+	\item Opere dell'uomo
+	\item Strumenti
+	\item Oggetti fisici
+\end{enumerate}
+Il primo passo è capire cosa sia un algoritmo e come possa essere usato per risolvere problemi. È possibile utilizzare esempi di problemi, non necessariamente problemi reali, per illustrare il concetto.\textbf{Programma come entità astratta}.
+Successivamente, è possibile passare dal modello "pseudocodice" alla codifica, utilizzando anche un linguaggio semplice come Scratch. Questo serve sia per introdurre un po' di azione pratica, che secondo il costruttivismo aiuta a ricordare meglio le nozioni, sia per mantenere vivo l'interesse degli studenti, fattore da non sottovalutare. \textbf{programma come artefatto linguistico-notazionale}.
+
+Una volta introdotto l'algoritmo e un linguaggio di programmazione, si può pensare di eseguire il programma, anche presentando un debugger o una metodologia di logging, come delle print in mezzo al codice per comprendere lo stato delle variabili durante l'esecuzione. \textbf{programma come entità eseguibile}
+
+Dopo aver compreso cosa sia un algoritmo e aver scritto programmi semplici, è importante presentarli come \textbf{opere dell'uomo} e spiegare che hanno senso solo nel contesto in cui risolvono un problema specifico e che soprattutto sono limitati secondo i requisiti.
+Si possono presentare problemi reali e strutturati e proporre programmi per la loro risoluzione, magari anche scritti dagli studenti, che possano essere utilizzati come strumenti.
+Un esempio classico è la calcolatrice che permette di risolvere equazioni di secondo grado con la formula del delta. Oppure si possono utilizzare programmi in ambito interdisciplinare, mostrando il programma come \textbf{strumento}.
+Infine, si può presentare la visione del programma come \textbf{oggetto fisico}, spiegando l'architettura hardware e alcuni concetti di come funzionano CPU e memoria, sempre con l'ausilio di esercizi.
+Ad esempio si può usare la manipolazione di stringhe in C per far vedere che queste non sono altro che sequenze di interi ad 8 bit posizionati in settori di memoria contigui delimitati da un carattere "$\backslash$0".
+
+Sviluppando questa risposta, mi sono reso conto di quanto sia utile in realtà portare avanti tutti gli aspetti in parallelo, almeno i primi 3-4. Mentre si presenta la struttura di un algoritmo, si può iniziare a mostrare i primi costrutti in codice, anche con esercizi di lettura del codice. Una volta acquisite le basi, si può già pensare di eseguire programmi, senza necessariamente completare i primi punti. Allo stesso modo, si possono fare accenni alla memoria, alla complessità o allo scopo di un programma, anche se gli studenti non sono ancora in grado di scriverne uno completo.
+
+In sintesi, l'approccio suggerito è quello di uno sviluppo incrementale, piuttosto che "waterfall", prestando comunque attenzione alle priorità che ho esposto.
+
+\section{Consegna 7 \large NLD}
+
+\subsection{Domande}
+\begin{enumerate}
+	\item Individuare altri momenti, oltre a quelli presentati (sezioni 4.4.1, 4.4.2, 4.4.3, 4.4.4) in cui è possibile usare il NLD per introdurre nuovi concetti.
+	\item Nel vostro percorso scolastico/universitario avete mai "sentito la necessità" di un meccanismo/costrutto di programmazione prima che vi venisse spiegato?
+\end{enumerate}
+\subsection{Risposte}
+\subsubsection{1 usare il NLD per introdurre nuovi concetti}
+Oltre agli esempi presentati nel paper \cite{NLD} io userei NLD in questi casi:
+\begin{itemize}
+	\item \textbf{Pattern}. Nel punto successivo racconterò della mia esperienza di NLD involontario riguardo al pattern Singleton. Trovo comunque che questo approcio sia ideale per presentare i pattern di qualsiasi tipo, soprattutto i Design Patterns.
+	\item \textbf{Hashmap}. Mostrare che l'accesso in memoria può richiedere molto tempo, soprattutto con molti dati. Fare quindi svolgere problemi preliminari di estrazione di un dato (ad esempio usare un array o una lista) e poi fornire un dataset contenente moltissimi elementi.
+	\item \textbf{OOP/struct}. Di nuovo, prendendo spunto dalla mia esperienza presenterei OOP tramite NLD, dato che usando strutture sempre più complesse nasce ad un certo punto la necessità di un costrutto avente una struttura decisa dallo sviluppatore. Per me ad esempio questa necessità è nata nel linguaggio C ed è stata risolta con l'utilizzo delle struct. Dalla definizione di oggetto si passa naturalmente all' object oriented programming
+	\item \textbf{Strumenti di sincronizzazione}. Come semafori, messaggi, code, lock, mutex. Senza andare troppo nello specifico ci sono operazioni di mutua esclusione che possono essere svolte in maniera molto più intuitiva approfittando dell'astrazione. Si può certamente implementare tutti i tipi di mutua esclusione con i semafori, ma ci sono strumenti più sofisticati ed adatti alle singole esigenze. oppure si può fare l'opposto, partendo da questi strumenti più sofisticati spostarsi verso "il basso", quindi verso i semafori.
+\end{itemize}
+\subsubsection{2 Necessità di un costrutto di programmazione}
+Mi è capitato due volte che io ricordi. Un esempio "voluto" si presenta nel corso "Algoritmi e Complessità", ove il professor Roversi presenta 3 problemi irrisolvibili con la nostre conoscenze attuali con lo scopo di mostrarci questa nostra "carenza". Un esempio lampante di "Necessity Learning Design", mi viene addirittura da pensare che il professore abbia sentito parlare di questa metodologia ed abbia voluto provarla.
+Anche il resto di quel corso presenta molti momenti di "problem solving" con interazione della classe, forse più un esempio di "Productive failure" che di "Necessity Learning Design", in linea con il discorso fatto in conclusione della conferenza riguardo al non abusare del NDL\\
+Invece in maniera più "naturale" mi è capitato con i Design Pattern, ricordo di aver avuto necessità di una programmazione più "strutturata". Ê successo molto tempo fa ma se non vado errato mi era capitato di aver necessità di utilizzare un Singleton (al tempo senza sapere cosa fosse) e di aver pensato "Ci sarà un modo di utilizzare una classe come se fosse un oggetto", aver cercato a lungo su internet ed aver scoperto il Singleton Pattern.
+
+\printbibliography
+
+\end{document}
