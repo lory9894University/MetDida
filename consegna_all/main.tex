@@ -13,7 +13,31 @@
 \graphicspath{{figures/}}
 \usepackage{xcolor}
 \addbibresource{refs.bib}
+\usepackage{color}
+\usepackage{caption}
 
+\newcounter{nalg}[section] % defines algorithm counter for chapter-level
+\renewcommand{\thenalg}{\thesection .\arabic{nalg}} %defines appearance of the algorithm counter
+\DeclareCaptionLabelFormat{algocaption}{Algorithm \thenalg} % defines a new caption label as Algorithm x.y
+
+\lstnewenvironment{algorithm}[1][] %defines the algorithm listing environment
+{
+    \refstepcounter{nalg} %increments algorithm number
+    \captionsetup{labelformat=algocaption,labelsep=colon} %defines the caption setup for: it ises label format as the declared caption label above and makes label and caption text to be separated by a ':'
+    \lstset{ %this is the stype
+        mathescape=true,
+        frame=tB,
+        numbers=left,
+        numberstyle=\tiny,
+        basicstyle=\scriptsize,
+        keywordstyle=\color{black}\bfseries\em,
+        keywords={,input, output, return, datatype, function, in, if, else, foreach, while, begin, end, break, } %add the keywords you want, or load a language as Rubens explains in his comment above.
+        numbers=left,
+        xleftmargin=.04\textwidth,
+        #1 % this is to add specific settings to an usage of this environment (for instnce, the caption and referable label)
+    }
+}
+{}
 \begin{document}
 
 \author{Lorenzo Dentis, lorenzo.dentis@edu.unito.it}
@@ -247,6 +271,123 @@ In questo sono della stessa idea del mio collega Cacioli (di cui ho sentito le a
 
 \end{itemize}
 Come discusso in precedenza io non inserirei la \textbf{correttezza} tra le proprietà di un algoritmo.
+\section{Consegna 4 \large Progettazione soluzione/algoritmo}
+
+\subsection{Domande}
+\begin{itemize}
+	\item Leggete l'articolo Programming Patterns and Design Patterns in the Introductory Computer Science Course e scrivete un breve resoconto sull'approccio proposto:siete d'accordo con l'approccio proposto? lo adottereste? immaginate di proporlo in una classe in cui insegnate: quali sono le potenziali difficoltà?
+	\item riportate il testo del problema analizzato per l'attività 2) Progettazione soluzione/algoritmo e la soluzione che avete progettato: suddivisione in sottoproblemi,pattern algoritmici, elementari e ruoli delle variabili.
+	\item descrivete anche eventuali critiche (es. sulla formulazione del problema), problemi e considerazioni emerse durante l'attività
+\end{itemize}
+\subsection{Risposte}
+\subsubsection{Commento sull'articolo}
+In generale, concordo molto con il metodo presentato nell'articolo \cite{articolo}, anche perché è simile al modo in cui io stesso preferisco imparare nuovi argomenti.
+Nella sezione 4.2, subito dopo \textit{Intent and Motivation}, viene presentata la sezione \textit{Problem Examples}, in cui sono mostrati alcuni esempi di utilizzo del pattern.
+Trovo molto utile vedere prima un esempio di soluzione in atto quando si affronta un nuovo problema.\\
+
+In futuro, gli studenti potranno far riferimento a questi pattern quando si troveranno di fronte a problemi simili, conoscendo già una possibile soluzione.
+Inoltre, questo metodo favorisce il riuso.
+Personalmente, durante il mio secondo anno di università, ho dovuto analizzare un file CSV molto complesso in Java e ho scritto del codice che ancora oggi utilizzo ogni volta che mi trovo ad avere in input un file con tale estensione.\\\\
+Tutti i pattern presentati nell'articolo sono molto comuni, tanto che, prima di averli letti, li avevo già inseriti nella mia prima bozza dell'attività 2. In modo inconscio, ho scritto una domanda che richiede di risolvere due dei problemi presentati nell'articolo, volendo presentare un problema "semplice" e "comune".\\
+
+In aula, una collega ha sostenuto che questo metodo potrebbe ostacolare l'apprendimento del \textit{problem solving} e, in generale, concordo con questa affermazione.
+Cercare di categorizzare ogni problema e fornire la soluzione agli studenti rende la soluzione molto "meccanica" e non aiuta a sviluppare la capacità di "cercare" un modo di risolvere il problema.\\
+Gli autori cercano di guidare gli studenti per evitare la situazione "I do not even know where to start", ma spesso capire da dove partire per risolvere un problema è una skill a sé, un'abilità che va sviluppata e che risulta utile nella vita quotidiana di uno sviluppatore.\\
+
+Tuttavia, l'articolo non propone questo metodo come una panacea per insegnare a tutti gli sviluppatori, ma, citando ancora la sezione 4.2, \textit{"The patterns are written to guide a novice with little or no programming experience"}.
+Quindi, si cerca di insegnare a programmare a persone con scarsa esperienza, che non hanno ancora le basi per iniziare a sviluppare la capacità di "cercare da soli una soluzione". In questo senso, credo che questo metodo sia eccellente.
+
+\subsubsection{Attività 2}
+\paragraph{Problema posto da Dentis}
+\texttt{Lo Chef Tony vuole che la sua cucina sia sempre in ordine e soprattutto sapere quali ingredienti ha a disposizione.\\Quindi ha suddiviso gli ingredienti in 5 categorie: \textit{pasta,sugo,carne,verdure e spezie}.\\
+Quando arriva un nuovo carico di materie prime (il numero di ingredienti in un carico può variare) Tony vuole che queste vengano separati automaticamente nelle 5 categorie e gli venga restituito in output quanti elementi di ogni categoria ci sono nel carico appena giunto.}
+
+Il problema può essere complicato come nella seguente variante:\texttt{ Il programma deve tenere conto che Tony non è l'unico Chef di Cat\&Ring, nella dispensa potrebbero esserci ingredienti rimasti, quindi deve chiedere allo Chef la quantità rimasta e comportarsi di conseguenza.}
+\paragraph{Soluzione del problema posto da Dentis}
+
+\begin{algorithm}[caption={La cucina di Chef Tony (pt.1)}, label={alg1}]
+ input: int n, list carico
+ output: int pasta, int sugo, int carne, int verdure, int spezie
+ begin
+   i $\gets$ 0
+   pasta $\gets$ 0
+   sugo $\gets$ 0
+   carne $\gets$ 0
+   verdure $\gets$ 0
+   spezie $\gets$ 0
+   while i $\leq$ n
+      switch (categoria del prodotto i-esimo presente nel carico)
+        case pasta:
+            pasta $\gets$ pasta + 1
+        case sugo:
+            sugo $\gets$ sugo + 1
+        case carne:
+            carne $\gets$ carne + 1
+        case verdure:
+            verdure $\gets$ verdure + 1
+        case spezie:
+            spezie $\gets$ spezie + 1
+      i $\gets$ i + 1
+   end
+   return pasta, sugo, carne, verdure, spezie
+ end
+\end{algorithm}
+
+\newpage
+\paragraph{Problema posto da D'Angelo}
+\texttt{Tra meno di 30 giorni, si svolgerà a Liverpool la sessantasettesima edizione dell’Eurovision Song Contest!\\Vista una serie di problemi avvenuti nelle votazioni dello scorso anno Martin Österdahl, produttore esecutivo della manifestazione, ha deciso di tenere sempre una copia della classifica in un pc separato e inattaccabile da hackers.\\Il tuo compito è, dato il singolo paese, vedere i punteggi che quella nazione assegna ad ogni altro partecipante in gara e restituire la classifica completa.\\I punteggi che possono essere assegnati sono:}
+\begin{itemize}
+\item 0 (default)
+\item 1 <= punteggio <= 8
+\item 10
+\item 12
+\end{itemize}
+
+\paragraph{Soluzione del problema posto da D'Angelo}
+
+\begin{algorithm}[caption={Calcolo punteggi}, label={alg2}]
+	input: $lista\_voti$ (che paese ha votato ogni paese).
+	output: $classifica$
+	begin:
+	$num\_paesi$ $\gets$ lunghezza($lista\_voti$)
+	$classifica$ $\gets$ vettore[$num\_paesi$] //vettore con tutti i paesi ed i voti ricevuti
+	foreach $voto$ in $lista\_voti$
+		foreach $paese$ in $classifica$
+			if $voto$ uguale $paese$
+				classifica[paese] $\gets$ 12 + classifica[paese]
+				break
+			end
+		end
+	end
+	return $classifica$
+\end{algorithm}
+
+\textbf{Pattern elementari}
+\begin{itemize}
+	\item Guarded-Action: riga 8
+	\item Process-All-item: riga 6, scorriamo tutta la lista dataci in input
+	\item process-Items-Unitl-Done: riga 10. Mentre si sta scorrendo il vettore della classifica se si trova il paese a cui bisogna assegnare il voto si può interrompere la ricerca.
+\end{itemize}
+
+\textbf{Pattern Algoritmici}
+\begin{itemize}
+	\item 3.7 Traversal Pattern. In particolare \textit{simple linear traversal} dato che stiamo scorrendo due vettori
+	\item 3.5 Repetition Patterns. Dato che abbiamo due loop annidiati.
+	\item 3.8 Cumulative Result Patterns. usiamo una composizione di 3 pattern, due repetition pattern (i loop annidiati) ed un accumulatore (il vettore classifica che tiene conto dei punteggi). citando il documento \cite{articolo} \textit{he goal is to traverse some collection of data, collecting partial information into some accumulator entity and presenting the composite result at the end.}
+
+\end{itemize}
+\textbf{Ruoli delle variabili}
+
+\begin{itemize}
+	\item Valore fissato: la variabile $num\_paese$ serve solo in fase di inizializzazione per fissare la dimensione della classifica. In realtà se ne sarebbe anche potuto fare a meno.
+	\item Contatore o Indice: la variabile $paese$ svolge anche il ruolo di indice del vettore $classifica$
+	\item Accumulatore: la variabile $classifica$ è un vettore di accumulatori.
+\end{itemize}
+\subsubsection{Considerazioni emerse}
+La versione originale del problema prevedeva una struttura dati differente: una collection di oggetti (paesi) contenenti una lista di voti.
+Ogni paese quindi avrebbe avuto una sua lista di punteggi assegnati ad ogni altro paese.
+
+Il problema è che la struttura dati necessaria a rappresentare tale collezione è un po' troppo complicata per il target, dato che necessiterebbe la nozione di \textit{object} oppure l'uso di una matrice bidimensionale.
 \section{Consegna 5 \large Misconception}
 
 \subsection{Domande}
