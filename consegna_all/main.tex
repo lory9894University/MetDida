@@ -1,4 +1,5 @@
 \documentclass[a4paper]{article}
+\renewcommand{\baselinestretch}{1.2}
 \usepackage{listings}
 \usepackage{xcolor}
 \usepackage{forest}
@@ -332,6 +333,30 @@ Il problema può essere complicato come nella seguente variante:\texttt{ Il prog
  end
 \end{algorithm}
 
+\textbf{Pattern elementari}
+\begin{itemize}
+	\item Alternative Actions: riga 11 (esistono x casi diversi, con x azioni diverse
+da intraprendere) 
+	\item Process-All-Items: riga 4 (in quanto ogni elemento della lista viene selezionato, processato e, poi, ci si prepara per il successivo oggetto) 
+\end{itemize}
+
+\textbf{Pattern Algoritmici}
+\begin{itemize}
+	\item Traversal Pattern: in particolare, si tratta dell’utilizzo di un \textit{simple linear traversal pattern} (in quanto stiamo scorrendo lungo una lista di elementi)
+	\item Cumulative Result Patterns: soprattutto vista la definizione del goal data nell’articolo \textit{Programming Patterns and Design Patterns in the Introductory Computer Science Course}, che rappresenta in pieno l’approccio utilizzato durante la stesura dell’algoritmo: 
+\textit{\texttt{the goal is to traverse some collection of data, collecting partial information into some accumulator entity and presenting the composite result at the end}}
+\item epetition Pattern: in particolare una \textit{conditioned repetition}, in quanto è presente un ciclo while all’interno dell’algoritmo
+
+\end{itemize}
+\textbf{Ruoli delle variabili}
+
+\begin{itemize}
+	\item \textit{n}: ha il ruolo di \textit{\textbf{valore fissato}}; rappresenta, infatti, la dimensione della lista carico che non viene a modificarsi durante lo svolgimento dell’algoritmo (volendo potrebbe essere sostituito da \textit{carico.length} che esprime la lunghezza della lista carico)
+	\item \textit{i}: ha il ruolo di \textit{\textbf{contatore}}; rappresenta, infatti, lo scorrimento della lista \textit{carico} mentre si modificano le variabili riferite ai tipi di alimenti presenti 
+	\item \textit{pasta, sugo, carne, spezie, verdure}: hanno il ruolo di \textit{\textbf{accumulatori}};
+rappresentano, infatti, l’accumulo di tutti i valori trovati fino a un momento $i$-esimo di una certa categoria di elementi 
+\end{itemize}
+\
 \newpage
 \paragraph{Problema posto da D'Angelo}
 \texttt{Tra meno di 30 giorni, si svolgerà a Liverpool la sessantasettesima edizione dell’Eurovision Song Contest!\\Vista una serie di problemi avvenuti nelle votazioni dello scorso anno Martin Österdahl, produttore esecutivo della manifestazione, ha deciso di tenere sempre una copia della classifica in un pc separato e inattaccabile da hackers.\\Il tuo compito è, dato il singolo paese, vedere i punteggi che quella nazione assegna ad ogni altro partecipante in gara e restituire la classifica completa.\\I punteggi che possono essere assegnati sono:}
